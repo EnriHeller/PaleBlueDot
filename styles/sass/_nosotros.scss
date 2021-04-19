@@ -1,0 +1,77 @@
+@import "./variables";
+
+.nos-container{
+    width: 100%;
+}
+
+// IMAGEN DEL MOVIL 
+
+.movil{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: -100px;
+    margin-bottom: 27px;
+    z-index: 1;
+}
+
+.movil img{
+    margin: auto;
+    width: 90%;
+}
+
+
+.nosotros{
+    width: 100%;
+    padding: 0 16px;
+    margin-bottom: 54px ;
+}
+
+.nosotros .titulo{
+    margin-bottom: 8px;
+}
+
+// movil img responsive fix
+
+@media screen and (min-width:424px){
+    .movil img{
+        width: 70%;
+    }
+}
+
+@media screen and (min-width:600px){
+    .movil img{
+        width: 60%;
+    }
+}
+
+//DESKTOP
+
+@media screen and (min-width:1220px){
+
+    .nos-container{
+        display: flex;
+    }
+
+    .movil{
+        width: 30%;
+        margin: -160px 0 0 20%;
+    }
+
+    .movil img{
+        width: 90%;
+    }
+
+    .nosotros{
+        width: 30%;
+        padding: 0 16px;
+        margin: 20px 0 0 62.4px;
+    }
+
+    .nosotros .titulo{
+        margin-bottom: 8px;
+    }
+    
+}
+

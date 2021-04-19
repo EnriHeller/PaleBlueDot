@@ -1,0 +1,54 @@
+@import "./variables";
+
+.invitados{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 42px;
+}
+
+.invitados .titulo{
+    padding: 0 $padding-size-1;
+    margin-bottom: 16px;
+}
+
+.invitados img{
+    width: 100%;
+    display: block;
+}
+
+//TABLET
+
+@media screen and (min-width:600px) {
+
+    .invitados_imgs{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .invitados img{
+        width: 50%;
+    }
+
+}
+
+//DESKTOP
+
+@media screen and (min-width:1220px) {
+    .invitados{
+        margin: 64px 0;
+    }
+
+    .invitados .titulo{
+        padding: 0;
+        margin: 0 0 36px 200px;
+    }
+
+    .invitados img{
+        width: 33.3333%;
+    }
+
+    
+   
+
+}

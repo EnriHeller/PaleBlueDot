@@ -1,0 +1,103 @@
+@import "./variables";
+
+.titulo{
+    font-family: $font-family-1;
+    font-size: $font-size-1;
+}
+
+.light{
+    font-weight: 300;
+}
+
+.medium{
+    font-weight: 500;
+}
+
+.semi-bold{
+    font-weight: 600;
+}
+
+.parrafo{
+    font-family: $font-family-2;
+    font-size: $font-size-2;
+    line-height: 22px;
+}
+
+.boton-celeste{
+    display: flex;
+    width: 288px ;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color-variant;
+    font-family: $font-family-2;
+    font-size: $font-size-3;
+    font-weight: 500;
+    color: $terciary-color;
+}
+
+.boton-celeste:active{
+    background-image: linear-gradient(225deg, rgba(0,0,254,1) 0%, rgba(0,240,184,1) 100%);
+    color: $primary-color;
+    cursor: pointer;
+}
+
+//TABLET
+
+@media screen and (min-width:600px){
+
+    .titulo{
+        font-size: 42px;
+    }
+
+    .parrafo{
+        font-size: $font-size-3;
+    }
+}
+
+
+
+//DESKTOP
+
+
+@media screen and (min-width:1220px) {
+    
+    .titulo{
+        font-size: $font-size-5;
+    }
+
+    .parrafo{
+        font-size: $font-size-3;
+        line-height: 24px;
+    }
+
+    .boton-celeste{
+        width: 345px;
+        height: 56px;
+        font-size: $font-size-4;
+    }
+
+    // HOVER
+
+    .boton-celeste:hover{
+        background-image: linear-gradient(225deg, rgba(0,0,254,1) 0%, rgba(0,240,184,1) 100%);
+        color: $primary-color;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

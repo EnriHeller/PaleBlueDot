@@ -1,0 +1,193 @@
+@import "./variables";
+
+ //Distribucion de contenido 
+
+.cabecera{
+    width: 100%;
+    height: 44px;
+    background-color: $primary-color;
+    display: flex;
+    padding: $padding-size-2 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 100;
+}
+
+// Ajustes del menú hamburguesa y logo 
+
+.bd-logo{
+    width: 24px;
+    margin-left: 16px;
+    
+}
+
+.check{
+    display: none;
+}
+
+.boton{
+    display: block;
+    width: 36px;
+    height: 24px;
+    margin-right: 12px;
+    background-color: $primary-color;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.boton:before, .boton:after {
+    position:absolute;
+    display:block;
+    content:" ";
+    width: calc(100% / 2);               
+    box-sizing: border-box;
+    left: calc(100% / 4);
+    transition: all 0.2s ease-out;
+}
+
+.boton:before{
+    top: calc(100% / 4);
+    height:30%;
+    border-top:2px solid black;
+    border-bottom:2px solid black;
+    background-color: transparent;
+}
+
+.boton:after {
+    height: 2px;
+    background-color:black;
+    bottom:calc(100% / 4);
+}
+
+
+// Menu desplegable 
+
+.menu-pestaña{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 224px;
+    margin-top: 6px;
+    padding: $padding-size-1;
+    background-color: $secondary-color;
+    border-radius: 2px;
+    z-index: 100;
+    animation-name: despliegue;
+    animation-duration: 0.5s;
+}
+
+.menu-pestaña a{
+    display: none;
+    color: $primary-color;
+    font-family: $font-family-2;
+    word-spacing: 28px;
+    font-size: 16px;
+}
+
+//Menu desplegable al pulsar sobre el boton 
+
+.check:checked ~ .menu-pestaña {
+    display: flex;
+}
+
+.check:checked ~ .menu-pestaña a {
+    display: block;
+}
+
+// Animación de pestaña  
+
+@keyframes despliegue {
+
+    0%{
+        height: 0px;
+        opacity: 0%;
+    }
+
+    100%{
+        height: 224px;
+        opacity: 100%;
+    }
+}
+
+// Comportamiento del menú hamburguesa al pulsar 
+
+.check:checked + .boton:before, .check:checked + .boton:after {
+    top: 50%;
+    height: 2px;
+    border-bottom:0;
+}
+
+.check:checked + .boton:before{
+    transform: rotate(45deg);
+}
+
+.check:checked + .boton:after {
+    transform: rotate(-45deg);
+}
+
+// Comportamiento de los enlaces al pulsar
+
+.menu-pestaña a:active{
+    transition: all 0.2s ease-in-out;
+    color: $hover-color;
+    text-decoration: line-through;
+}
+
+
+
+
+// DESKTOP
+
+@media screen and (min-width:1220px) {
+
+    .cabecera{
+        height: 80px;
+    }
+
+    .bd-logo{
+        width: 36px;
+        margin-left: 100px;
+    }
+
+    .boton{
+        display: none;
+    }
+
+    .menu-pestaña{
+        display: flex;
+        flex-direction: row ;
+        background-color: $primary-color;
+        width: 40%;
+        height: 80%;
+        justify-content: flex-end;
+        margin-right: 100px;
+    }
+
+    .menu-pestaña a{
+        display: block;
+        color: $terciary-color;
+        margin-left: 48px;
+    }
+
+    // Comportamientos HOVER y ACTIVE
+
+    .menu-pestaña a:hover, .menu-pestaña a:active{
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: line-through;
+    }
+
+    .menu-pestaña a:hover{
+        transition: all 0.2s ease-in-out;
+        color: $hover-color;
+    }
+
+    .menu-pestaña a:active{
+        color: $active-color;
+    }
+
+}

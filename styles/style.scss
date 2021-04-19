@@ -1,0 +1,25 @@
+@import "./sass/mixins";
+@import "./sass/variables";
+
+
+*{
+    @include format-document;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: auto ;
+    width: 100%;
+}
+
+@import "./sass/header";
+@import "./sass/main";
+@import "./sass/presentacion";
+@import "./sass/episodios";
+@import "./sass/nosotros";
+@import "./sass/invitados";
+@import "./sass/topicos";
+@import "./sass/footer";

@@ -1,0 +1,106 @@
+@import "./variables";
+@import "./mixins";
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.novedades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: $background-color;
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
+}
+
+.novedades>.cont__titulo{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin:  64px 16px 36px;
+    color: $primary-color;
+}
+
+.novedades .boton-celeste{
+    margin-bottom: 67px ;
+}
+
+ .redes{
+     width: 100%;
+     height: 120px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .enlaces{
+     display: flex;
+     width: 90%;
+     justify-content: space-around;
+     align-items: center;
+     margin-top: 16px;
+ }
+
+ .icono{
+     width: 16px;
+ }
+ 
+ .fb{
+     border-radius: 100%;
+ }
+
+
+ //DESKTOP
+@media screen and (min-width:1220px) {
+    
+    .novedades{
+        clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0 100%);
+    }
+
+    .novedades>.cont__titulo{
+        margin-top: 213px;
+    }
+
+    .novedades .boton-celeste{
+        margin-bottom: 151px ;
+    }
+
+    .redes{
+        padding: 36px 100px;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .enlaces{
+        justify-content: flex-end;
+    }
+
+    .icono{
+        margin-left: 36px;
+    }
+     
+    .icono:hover{
+        animation-name: icon-hover;
+        animation-duration: 5s;
+    }
+
+    @keyframes icon-hover {
+    
+        0%{
+            width: 16px;
+        }
+
+        5%{
+            width: 25px;
+        }
+        100%{
+            width: 25px;
+        }
+    }
+
+    
+}

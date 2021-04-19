@@ -1,0 +1,84 @@
+@import "./variables";
+@import "./mixins";
+
+// PRESENTACION
+
+.presentacion{
+    width: 100%;
+    padding: $padding-size-3 $padding-size-1 ;
+}
+
+.presentacion .titulo{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    margin-top: 73px;
+}
+
+.tachado{
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.cambio-de-color{
+    color: $secondary-color;
+}
+
+.presentacion .parrafo{
+    margin-bottom: 36px;
+}
+
+.presentacion .boton-celeste{
+    margin: auto;
+}
+
+// h1 responsive fix
+
+@media screen and (min-width:424px){
+    
+    .presentacion .titulo{
+        font-size: 42px;
+        max-width: 450px;
+    }
+}
+
+
+//DESKTOP
+
+@media screen and (min-width:1220px) {
+
+    .presentacion{
+        padding: $padding-size-3 200px ;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .presentacion .titulo{
+        margin-top: 200px;
+        margin-bottom: 0;
+        font-size: 64px;
+   
+    }
+
+    .tachado{
+        margin: 0 15px;
+    }
+
+    .presentacion .parrafo{
+        width: 628px;
+        height: 48px;
+        margin-bottom: 56px;
+        visibility: hidden;
+    }
+
+    .presentacion .parrafo::before{
+        visibility: visible;
+        content: "El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.";
+    }
+
+    .presentacion .boton-celeste{
+        width: 226px;
+        margin: 0;
+    }
+}
+

@@ -1,0 +1,23 @@
+// sizes
+$padding-size-1: 16px;
+$padding-size-2: $padding-size-1*0.625;// 10px 
+$padding-size-3: $padding-size-1*0.125;// 2px
+
+$font-size-1: 36px;
+$font-size-2: $font-size-1*0.38;// 14px
+$font-size-3: $font-size-1*0.44;// 16px
+$font-size-4: $font-size-1*0.5;// 18px
+$font-size-5: $font-size-1*1.33;// 48px
+
+// font-family 
+$font-family-1: 'IBM Plex Sans', sans-serif;
+$font-family-2: 'IBM Plex Mono', monospace;
+
+// colors 
+$primary-color: #FFFF;
+$secondary-color: #0000ec;
+$secondary-color-variant: rgba(0,243,187,1);
+$terciary-color: #060A24;
+$background-color:  linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+$hover-color: #00f3bb;
+$active-color: #060a248a;
