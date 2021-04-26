@@ -5,8 +5,8 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   list-style: none;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   text-decoration: none;
   outline: none;
 }
@@ -270,6 +270,9 @@ body {
   }
   .parrafo {
     font-size: 15.84px;
+  }
+  .boton-celeste {
+    width: 60%;
   }
 }
 
@@ -726,10 +729,7 @@ body {
 
 .icono {
   width: 16px;
-}
-
-.fb {
-  border-radius: 100%;
+  color: #060A24;
 }
 
 @media screen and (min-width: 1220px) {
@@ -762,32 +762,8 @@ body {
     margin-left: 36px;
   }
   .icono:hover {
-    -webkit-animation-name: icon-hover;
-            animation-name: icon-hover;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
-  }
-  @-webkit-keyframes icon-hover {
-    0% {
-      width: 16px;
-    }
-    5% {
-      width: 25px;
-    }
-    100% {
-      width: 25px;
-    }
-  }
-  @keyframes icon-hover {
-    0% {
-      width: 16px;
-    }
-    5% {
-      width: 25px;
-    }
-    100% {
-      width: 25px;
-    }
+    -webkit-transform: scale(150%);
+            transform: scale(150%);
   }
 }
 /*# sourceMappingURL=style.css.map */

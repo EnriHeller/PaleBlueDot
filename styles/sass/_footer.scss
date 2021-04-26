@@ -47,12 +47,9 @@
 
  .icono{
      width: 16px;
+     color: $terciary-color;
  }
  
- .fb{
-     border-radius: 100%;
- }
-
 
  //DESKTOP
 @media screen and (min-width:1220px) {
@@ -84,23 +81,9 @@
     }
      
     .icono:hover{
-        animation-name: icon-hover;
-        animation-duration: 5s;
+        transform: scale(150%);
     }
 
-    @keyframes icon-hover {
-    
-        0%{
-            width: 16px;
-        }
-
-        5%{
-            width: 25px;
-        }
-        100%{
-            width: 25px;
-        }
-    }
 
     
 }
